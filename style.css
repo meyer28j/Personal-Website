@@ -1,47 +1,57 @@
 body {
-    background-color: linen;
+    background-color: #e0e0e0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px;
 }
 
+header, footer {
+    color:white;
+    background-color:#444;
+    clear: both;
+    margin:0;
+    padding:8px;
+    min-height: 40px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 6px;
+    font-size: 40px;
+    color: white;
+}
+
 .gridContainer {
     display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-template-rows: 60px 1fr 1fr 2fr;
+    grid-template-columns: 2fr 5fr 2fr;
+    grid-auto-rows: auto;
+}
+
+.center {
+    margin: 20px 20% 20px 20%;
+
 }
 
 section {
-    margin: 20px;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    grid-column: 1 / 4;
 }
 
 section.mainText {
     font-size: large;
-    grid-column: 1 / 5;
+    line-height: 180%;
     grid-row: 2 / 3;
-}
-
-section.classes {
-    grid-column: 1 / 5;
-    grid-row: 3 / 4;
-    font-size: large;
-    text-align: center;
-    background-color: lightcoral;
-}
-
-.evenRow {
-    background-color: orangered;
-}
-
-.footerText{
-    text-align: center;
+    color: white;
+    background-color: rgb(70, 144, 255);
 }
 
 /*Found this tutorial on w3schools*/
 
-.parallax {
-    grid-row: 4 / 5;
+section.parallax {
+    grid-row: 3 / 4;
     grid-column: 1 / 10;
-    background-image: url("pacman.png");
+    background-image: url("img/pacman.png");
     height: 300px;
     width: 100%;
     background-attachment: fixed;
@@ -49,6 +59,49 @@ section.classes {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+section.classes {
+    grid-row: 4 / 5;
+    font-size: large;
+    text-align: center;
+    background-color: rgb(250, 123, 39);
+    color: white;
+}
+
+article.left {
+    float: left;
+}
+
+article.center {
+    float: center;
+}
+
+article.right {
+    float: right;
+}
+
+.classesTable {
+    float: center;
+}
+
+.classesTable td {
+    padding: 6px;
+}
+
+.classesTable tr:nth-child(even) {
+    background-color: rgb(252, 92, 34);
+}
+
+.links{
+    text-align: center;
+}
+
+.links a {
+    background: none;
+
+}
+
+
 
 .navBar {
     grid-column: 1 / 10;
